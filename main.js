@@ -36,7 +36,7 @@ async function main() {
     cwd: flatbuffersExtractPath
   })
   
-  await exec.exec("flattests", undefined, {
+  await exec.exec("ctest", undefined, {
 	  cwd: flatbuffersExtractPath
   })
 
