@@ -1,0 +1,21 @@
+name: test
+
+on: [push]
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        flatbuffersVersion: ["1.11.0"]
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: pulynerain/gh-actions-flatbuffers@master
+      with:
+        flatbuffersVersion: ${{ matrix.flatbuffersVersion }}
+
+    - name: test flatbuffers
+      run: flatc --version

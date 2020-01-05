@@ -1,0 +1,20 @@
+
+name: "Install Flatbuffers"
+description: "Download, build, and install Flatbuffers"
+
+branding:
+  icon: 'heart'
+  color: 'yellow'
+
+inputs:
+  flatbuffersVersion:
+    description: "The version of Flatbuffers to install, must be available on https://github.com/google/flatbuffers/archive/"
+    required: false
+    default: "1.11.0"
+  flatbuffersCompileFlags:
+    description: "Command line flags passed to make when building Flatbuffers"
+    required: false
+
+runs:
+  using: 'node12'
+  main: 'main.js'
