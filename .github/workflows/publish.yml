@@ -22,7 +22,7 @@ jobs:
         flatbuffersVersion: ${{ matrix.flatbuffersVersion }}
 
     - name: bundle binaries
-      run: tar czf '${{matrix.flatbuffersVersion}}.tar.gz' .lua
+      run: tar czf '${{matrix.flatbuffersVersion}}.tar.gz' .flatbuffers
 
     - name: upload to release
       uses: svenstaro/upload-release-action@v1-release
